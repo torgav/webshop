@@ -20,6 +20,8 @@ button {
     font-family: 'Odibee Sans', cursive;
     color: #FFFFFF;
     margin: 0;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 .thin-text{
@@ -101,6 +103,7 @@ button {
     position: absolute;
     z-index: 2;
     margin-top: 150px;
+    color: #FFFFFF;
 }
 
 main{
@@ -118,23 +121,57 @@ main{
     border-radius: 20px;
     width: 360px;
     height: 110px;
-    margin-top: 7.5px;
-    margin-bottom: 7.45px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     align-items: center;
 }
 
-.små-bilder{
+#top-display-box{
+    margin-top: 10px;
+}
+
+.small-pictures{
     height: 115x;
     width: 170px;
     margin-left: 10px;
 }
 
-.product-information{
+#top-big-display-box{
+    margin-top: 10px;
+}
+
+.display-box > .product-information{
     height: 100px;
+}
+
+.product-information{
     text-align: center;
     justify-items: center;
 }
 
 .product-information > h2{
     margin-top: 8px;
+}
+
+.big-display-box{
+    position: relative;
+    height: 280px;
+    width: 361px;
+}
+
+.big-pictures{
+    position: absolute;
+    z-index: 1;
+    height: 280px;
+    width: 361px;
+    border-radius: 20px;
+}
+
+.big-display-box > .product-information{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 15px;
+    margin-right: 15px;
 }
