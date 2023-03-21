@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #000000;
+    background-color: #0F0E0E;
 }
 button {
     border: none;
@@ -21,6 +21,7 @@ button {
     width: 114px;
     height: 38px;
     cursor: pointer;   
+    font-size: calc(0.75rem + 1vw);
 }
 
 button:hover {
@@ -28,19 +29,32 @@ button:hover {
     color: #FFFFFF;
 }
 
+#text{
+    font-family: 'Odibee Sans', cursive;
+    color: #FFFFFF;
+    margin: 0;
+    font-weight: 300;
+    font-size: calc(0.75rem + 1vw);
+}
+
 .fine-text{
     font-family: 'Odibee Sans', cursive;
     color: #FFFFFF;
     margin: 0;
     font-weight: 300;
-    font-size: 15px;
+    font-size: calc(0.75rem + 1vw);
 }
 
 .thin-text{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 12px;
+    font-size: calc(0.65rem + 0.5vw); 
     color: #FFFFFF;
+}
+header{
+    top: 0px;
+    position: sticky;
+    z-index: 5;
 }
 
 .nav-container{
@@ -56,14 +70,93 @@ button:hover {
 #title-text{
     font-size: 30px;
 }
-
-#shopping-cart-icon{
+/* Varukorg css*/
+#cart-icon{
     height: 28px;
     width: 28px;
     position: absolute;
     right: 0;
     margin-right: 20px;
+    cursor: pointer;
 }
+.cart{
+    position: fixed;
+    margin-top: 61px;
+    top: 0;
+    right: 0;
+    width: 260px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #0F0E0E;
+    z-index: 5;
+    padding: 0;
+}
+
+.cart > h2{
+   margin: 1em 0; 
+   padding: 0 14px;
+}
+
+.cart-items{
+    padding: 0;
+}
+
+.cart-items > li{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    position: relative;
+    padding: 1em;
+    height: 38px;
+    border-top:1px solid #FFFFFF;
+    
+}
+
+.product-quantity{
+    color: #a5aebc;
+}
+
+ul{
+    list-style: none;
+}
+
+.product-remove{
+    display: flex;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    right: 1em;
+    top: 50%;
+}
+
+.product-details > span{
+    display: flex;
+}
+
+.product-price{
+    color: #9a9595;
+}
+
+.cart-total{
+    border-top: 1px solid #FFFFFF;
+    padding: 1em;
+}
+
+.cart-amount{
+    float: right;
+}
+
+.cart > a{
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+}
+
+
 
 .hero-container{
     position: absolute;
@@ -77,14 +170,14 @@ button:hover {
 #hero-background-picture{
     position: absolute;
     width: 100%;
-    height: 250px;
+    height: auto;
     z-index: 1;
 }
 
 #hero-shoe-picture{
     position: absolute;
-    width: 280px;
-    height: 105px;
+    width: 70%;
+    height: auto;
     z-index: 2;
     transform: rotate(-24deg);
 }
@@ -108,6 +201,7 @@ button:hover {
     z-index: 2;
     margin-top: 150px;
     color: #FFFFFF;
+    font-size: calc(0.75rem + 1vw);
 }
 
 main{
@@ -135,8 +229,8 @@ main{
 }
 
 .small-pictures{
-    height: 115x;
-    width: 170px;
+    height: 100px;
+    width: 100%;
     margin-left: 10px;
 }
 
@@ -207,11 +301,15 @@ footer{
     margin-top: 5%;
 }
     
-a{
+#footer-title > a{
     color: #FFFFFF;
     text-decoration: none;
     font-family: 'Libre Barcode 39 Text', cursive;
     font-style: normal;
     font-weight: 400;   
     font-size: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+    
 }
