@@ -40,7 +40,6 @@ button:hover {
 .fine-text{
     font-family: 'Odibee Sans', cursive;
     color: #FFFFFF;
-    margin: 0;
     font-weight: 300;
     font-size: calc(0.75rem + 1vw);
 }
@@ -71,7 +70,7 @@ header{
     font-size: 30px;
 }
 /* Varukorg css*/
-#cart-icon{
+#open-cart-icon{
     height: 28px;
     width: 28px;
     position: absolute;
@@ -83,13 +82,17 @@ header{
     position: fixed;
     margin-top: 61px;
     top: 0;
-    right: 0;
+    right: -300px;
     width: 260px;
     min-height: 100vh;
-    padding: 20px;
     background: #0F0E0E;
     z-index: 5;
     padding: 0;
+    transition: right 0.3s ease-in-out;
+}
+
+.cart.open {
+    right: 0;
 }
 
 .cart > h2{

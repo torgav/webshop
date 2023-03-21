@@ -12,7 +12,7 @@
     <header>
         <div class="nav-container" id="top">
             <p class="fine-text" id="title-text">UNLOCKED</p>
-            <img src="./img/navbar-bag-icon.webp" alt="shopping cart icon" id="cart-icon">
+            <img src="./img/navbar-bag-icon.webp" alt="shopping cart icon" id="open-cart-icon" onclick="toggleCart()">
         </div> 
     </header>
     <hero>
@@ -94,7 +94,7 @@
         </div>
     </footer>
     <div class="cart-shadow-layer"></div>
-    <div class="cart">
+    <div class="cart" id="cart">
         <h2 class="fine-text">CART</h2>
         <ul class="cart-items">
             <li>
