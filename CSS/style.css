@@ -24,11 +24,6 @@ button {
     font-size: calc(0.75rem + 1vw);
 }
 
-button:hover {
-    background-color:#232222;
-    color: #FFFFFF;
-}
-
 #text{
     font-family: 'Odibee Sans', cursive;
     color: #FFFFFF;
@@ -41,13 +36,13 @@ button:hover {
     font-family: 'Odibee Sans', cursive;
     color: #FFFFFF;
     font-weight: 300;
-    font-size: calc(0.75rem + 1vw);
+    font-size: calc(0.75vh + 2vw);
 }
 
 .textStyleInter{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: calc(0.65rem + 0.5vw); 
+    font-size: calc(0.5vh + 2vw);
     color: #FFFFFF;
 }
 
@@ -72,6 +67,175 @@ header{
     font-size: 30px;
 }
 
+/*------------------HERO----------------------*/
+#hero{
+    display: block;
+    width: 100%;
+    height:250px;
+}
+
+.heroContainer{
+    position: absolute;
+    display: flex;
+    height: 250px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#heroBackgroundImage{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+#heroFrontImage{
+    position: absolute;
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    transform: rotate(-24deg);
+}
+
+.topProductDetails{
+    display: flex;
+    position: absolute;
+    height: 56px;
+    width: 7em;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+#topButton{
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.itemContainer > .buy-button{
+    position: absolute;
+}
+
+.heroContainer > p{
+    position: absolute;
+    z-index: 2;
+    margin-top: 150px;
+    color: #FFFFFF;
+    font-size: calc(0.75rem + 1vw);
+}
+
+/*----------------------MAIN----------------------*/
+main{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    top: 0;
+    justify-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.itemContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #181818;
+    border-radius: 20px;
+    width: 360px;
+    height: 110px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+
+#topItemContainer{
+    margin-top: 10px;
+}
+
+.smallFormatImages{
+    height: 100px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+#topBigItemContainer{
+    margin-top: 10px;
+}
+
+.itemContainer > .itemDescription{
+    height: 100px;
+}
+
+.itemDescription{
+    text-align: center;
+    justify-items: center;
+}
+
+.itemDescription > h2{
+    margin-top: 8px;
+    
+}
+
+.bigItemContainer{
+    position: relative;
+    height: 280px;
+    width: 361px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.largeFormatImages{
+    position: absolute;
+    z-index: 1;
+    height: 280px;
+    width: 361px;
+    border-radius: 20px;
+}
+
+.bigItemContainer > .itemDescription{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+/*-------------------------FOOTER----------------------*/
+footer{
+    margin-top: 15px;
+    height: 150px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.footerMediaContainer{
+    justify-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.logos{
+    height: 24px;
+    width: 24px;
+    margin-right: 17.5px;
+    margin-left: 17.5px;
+}
+
+#footerTitle{
+    margin-top: 5%;
+}
+    
+#footerTitle > a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-style: normal;
+    font-weight: 400;   
+    font-size: 40px;
+}
 
 /* -----------------------CART-----------------------------*/
 
@@ -87,7 +251,7 @@ header{
     position: fixed;
     margin-top: 61px;
     top: 0;
-    right: -300px;
+    right: -500px;
     width: 260px;
     min-height: 100vh;
     background: #0F0E0E;
@@ -101,7 +265,7 @@ header{
 }
 
 .cartShadowDrop{
-    right: -400px;
+    right: -500px;
     bottom: 0;
     margin-top: 61px;
     position: fixed;
@@ -185,168 +349,17 @@ header{
     font-size: 18px;
 }
 
-.heroContainer{
-    position: absolute;
-    display: flex;
-    height: 250px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
 
-#heroBackgroundImage{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-}
-
-#heroFrontImage{
-    position: absolute;
-    width: 70%;
-    height: auto;
-    z-index: 2;
-    transform: rotate(-24deg);
-}
-
-.topProductDetails{
-    display: flex;
-    position: absolute;
-    height: 56px;
-    width: 7em;
-    bottom: 0;
-    text-align: center;
-    justify-content: center;
-}
-
-#topButton{
-    bottom: 0;
-    position: absolute;
-    z-index: 2;
-}
-
-.itemContainer > .buy-button{
-    position: absolute;
-}
-
-.heroContainer > p{
-    position: absolute;
-    z-index: 2;
-    margin-top: 150px;
-    color: #FFFFFF;
-    font-size: calc(0.75rem + 1vw);
-}
-
-main{
-    display: grid;
-    grid-template-columns: auto;
-    margin-top: 16em;
-    justify-items: center;
-    gap: 10px;
-}
-
-.itemContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #181818;
-    border-radius: 20px;
-    width: 360px;
-    height: 110px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    align-items: center;
-}
-
-#topItemContainer{
-    margin-top: 10px;
-}
-
-.smallFormatImages{
-    height: 100px;
-    width: 100%;
-    margin-left: 10px;
-}
-
-#topBigItemContainer{
-    margin-top: 10px;
-}
-
-.itemContainer > .itemDescription{
-    height: 100px;
-}
-
-.itemDescription{
-    text-align: center;
-    justify-items: center;
-}
-
-.itemDescription > h2{
-    margin-top: 8px;
-}
-
-.bigItemContainer{
-    position: relative;
-    height: 280px;
-    width: 361px;
-    margin-top: 4px;
-    margin-bottom: 2px;
-}
-
-.largeFormatImages{
-    position: absolute;
-    z-index: 1;
-    height: 280px;
-    width: 361px;
-    border-radius: 20px;
-}
-
-.bigItemContainer > .itemDescription{
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 2;
-    margin-bottom: 15px;
-    margin-right: 15px;
-}
-
-footer{
-    margin-top: 15px;
-    height: 150px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-}
-
-.footerMediaContainer{
-    justify-items: center;
-    display: flex;
-    align-items: center;
-}
-
-.logos{
-    height: 24px;
-    width: 24px;
-    margin-right: 17.5px;
-    margin-left: 17.5px;
-}
-
-#footerTitle{
-    margin-top: 5%;
-}
-    
-#footerTitle > a{
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: 'Libre Barcode 39 Text', cursive;
-    font-style: normal;
-    font-weight: 400;   
-    font-size: 40px;
-}
-
+/*--TABLET--*/
 @media only screen and (min-width: 640px) and (max-width: 1250px) {
     body{
-        width: 100%;
+        
     }
+
+    #hero{
+        height: 350px;
+    }
+
     .heroContainer{
         position: absolute;
         display: flex;
@@ -356,11 +369,93 @@ footer{
         justify-content: center;
     }
 
+    #heroFrontImage{
+        width: 500px;
+        height: auto;
+
+    }
+
     main{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: 1vh;
        
     }
 
+    #topItemContainer{
+        grid-template-columns: 1/2;
+        grid-template-rows: 1/2;
+    }
+    .topProductDetails{
+        height: 65px    ;
+    }
 
+    #produkt2{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #produkt3{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .itemContainer{
+        width: 45vw;
+        height: 26vh;
+        margin-left: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .smallFormatImages{
+        width: 60%;
+        height: auto;
+    }
+
+    .bigItemContainer{
+        width: 45vw;
+        height: 26vh;  
+        margin-right: 2vh;
+    }
+    
+    .largeFormatImages{
+        width: 100%;
+        height: 100%;  
+    }
+
+    footer{
+        margin-top: 8%;
+    }
+    .footerMediaContainer{
+        gap: 30px;
+    }
+
+    .logos{
+        width: 40px;
+        height: auto;
+    }
+
+    #footerTitle > a{
+        font-size: 64px;
+    }
+
+    .cart{
+        width: 350px;
+    }
+
+    .cartItems{
+        padding: 24px ;
+    }
+    
+}
+
+@media only screen and (min-width: 1008px){
+    
+    button:hover {
+        background-color:#232222;
+        color: #FFFFFF;
+    }
 }

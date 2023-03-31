@@ -1,39 +1,25 @@
-function toggleCart() {
-    const cartElement = document.getElementById('cart');
-    cartElement.classList.toggle('open');
-    const backdrop = document.getElementById('cartBackgroundBlur');
-    backdrop.classList.toggle('is-visible');
-  }
-  
-  const removeCartItemButtons = document.getElementsByClassName('productRemoveButton');
-  console.log(removeCartItemButtons);
-  
-  for (let i = 0; i < removeCartItemButtons.length; i++) {
-    const button = removeCartItemButtons[i];
-    button.addEventListener('click', (event) => {
-      const buttonClicked = event.target;
-      buttonClicked.parentElement.parentElement.remove();
-    });
-  }
-
-  const cartItemContainer = document.querySelector('.cartItemContainer');
-const cartAmount = document.querySelector('.cart-amount');
+const cartItemContainer = document.querySelector('.cartItemContainer');
 const addToCartButtons = document.querySelectorAll('.addToCartButton');
+const cartAmount = document.querySelector('.cart-amount');
 const checkoutButton = document.querySelector('.checkoutButton');
 let totalPrice = 0;
 
-// Add event listener for add to cart buttons
+function toggleCart() {
+  const cartElement = document.getElementById('cart');
+  cartElement.classList.toggle('open');
+  const backdrop = document.getElementById('cartBackgroundBlur');
+  backdrop.classList.toggle('is-visible');
+}
+
 for (let i = 0; i < addToCartButtons.length; i++) {
   addToCartButtons[i].addEventListener('click', () => {
     const name = addToCartButtons[i].dataset.name;
     const price = addToCartButtons[i].dataset.price;
 
-    // Check if item is already in cart
     const cartItems = cartItemContainer ? Array.from(cartItemContainer.children) : [];
     const existingCartItem = cartItems.find(item => item.dataset.name === name);
 
     if (existingCartItem) {
-      // Update quantity and price of existing cart item
       const quantityText = existingCartItem.querySelector('.quantityText');
       const quantity = parseInt(quantityText.textContent) + 1;
       quantityText.textContent = `${quantity}x`;
@@ -43,13 +29,11 @@ for (let i = 0; i < addToCartButtons.length; i++) {
       const newPrice = existingPrice + parseInt(price);
       productPrice.textContent = `$${newPrice}`;
 
-      // Update total price
       totalPrice += parseInt(price);
       if (cartAmount) {
         cartAmount.textContent = `$${totalPrice}`;
       }
     } else {
-      // Create new cart item
       const cartItem = document.createElement('li');
       cartItem.classList.add('cartItems');
       cartItem.dataset.name = name;
@@ -92,13 +76,12 @@ for (let i = 0; i < addToCartButtons.length; i++) {
         cartItemContainer.appendChild(cartItem);
       }
 
-      // Update total price
       totalPrice += parseInt(price);
       if (cartAmount) {
         cartAmount.textContent = `$${totalPrice}`;
       }
 
-      // Set up event listener for product remove button
+      
       const removeButtonElement = cartItem.querySelector('.productRemoveButton');
       removeButtonElement.addEventListener('click', () => {
         console.log('Product remove button clicked');
@@ -112,7 +95,34 @@ for (let i = 0; i < addToCartButtons.length; i++) {
   });
 }
 
-// Add event listener for checkout button
 checkoutButton.addEventListener('click', () => {
   alert('Purchase complete!');
 });
+
+const removeCartItemButtons = document.getElementsByClassName('productRemoveButton');
+
+for (let i = 0; i < removeCartItemButtons.length; i++) {
+  const button = removeCartItemButtons[i];
+  button.addEventListener('click', (event) => {
+    const cartItem = event.target.parentElement.parentElement;
+    const name = cartItem.dataset.name;
+    const price = parseInt(cartItem.querySelector('.productPrice').textContent.replace('$', ''));
+    const quantity = parseInt(cartItem.querySelector('.quantityText').textContent);
+    const cartItems = Array.from(cartItemContainer.children);
+    const existingCartItem = cartItems.find(item => item.dataset.name === name);
+
+    if (existingCartItem) {
+      if (quantity > 1) {
+        existingCartItem.querySelector('.quantityText').textContent = `${quantity - 1}x`;
+        existingCartItem.querySelector('.productPrice').textContent = `$${(quantity - 1) * price}`;
+      } else {
+        existingCartItem.remove();
+      }
+
+      totalPrice -= price;
+      if (cartAmount) {
+        cartAmount.textContent = `$${totalPrice}`;
+      }
+    }
+  });
+}

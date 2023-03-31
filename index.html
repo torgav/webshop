@@ -15,7 +15,7 @@
             <img src="./img/navbar-bag-icon.webp" alt="shopping cart icon" id="cartIconButton" onclick="toggleCart()">
         </div> 
     </header>
-    <hero>
+    <hero id="hero">
         <div class="heroContainer" >
             <img src="./img/hero-top-bakgrundbild.webp" id="heroBackgroundImage" alt="Travis Scott Phnatom shoes Accessories">
             <img src="./img/hero-top-bild.webp" id="heroFrontImage" alt="Travis Scott Phantom Jordan 1 low">
@@ -34,15 +34,15 @@
                 <button type="button" class="addToCartButton" data-name="AJ1 HIGH RETRO STAGE HAZE" data-price="300">ADD TO CART</button>
             </div>
         </div>
-        <div class="itemContainer">
+        <div class="itemContainer" id="produkt2">
            <img src="./img/main-sko-bild(2).webp" class="smallFormatImages" alt="AIR JORDAN 1 HIGH LOST & FOUND">
            <div class="itemDescription">
                 <h2 class="textStyleInter">AIR JORDAN 1 HIGH<br>LOST &amp; FOUND</h2>
                 <h2 class="textStyleOdibee">$500</h2>
-                <button type="button" class="addToCartButton" data-name="AJ1 Lost & FOUND" data-price="500">ADD TO CART</button>
+                <button type="button" class="addToCartButton" data-name="AJ1 LOST & FOUND" data-price="500">ADD TO CART</button>
             </div>
         </div>
-        <div class="itemContainer">
+        <div class="itemContainer" id="produkt3">
            <img src="./img/main-sko-bild(3).webp" class="smallFormatImages" alt="MSCHF BIG RED BOOT">
            <div class="itemDescription">
                 <h2 class="textStyleInter">MSCHF <br>BIG RED BOOT</h2>
@@ -58,14 +58,14 @@
                 <button type="button" class="addToCartButton" data-name="AJ1 HIGH UNIVERSITY BLUE" data-price="450">ADD TO CART</button>
             </div>
         </div>
-        <div class="bigItemContainer">
+        <div class="bigItemContainer" id="produkt5">
             <img src="./img/main-sko-storbild(2).webp" class="largeFormatImages" alt="AIR JORDAN 4 MILITARY BLACK"> 
             <div class="itemDescription">
                 <h2 class="textStyleOdibee">$400</h2>
                 <button type="button" class="addToCartButton" data-name="AJ4 MILITRY BLACK" data-price="400">ADD TO CART</button>
             </div>
         </div>
-        <div class="bigItemContainer">
+        <div class="bigItemContainer" id="produkt6">
             <img src="./img/main-sko-storbild(3).webp" class="largeFormatImages" alt="AIR JORDAN 5 x OFF-WHITE"> 
             <div class="itemDescription">
                 <h2 class="textStyleOdibee">$1000</h2>
@@ -98,9 +98,7 @@
     <div class="cartShadowDrop" id="cartBackgroundBlur"></div>
     <div class="cart" id="cart">
         <h2 class="cartTitle textStyleOdibee">CART</h2>
-        <ul class="cartItemContainer">
-            
-        </ul>
+        <ul class="cartItemContainer"></ul>
         <div class="cart-total">
             <p class="textStyleOdibee">
                 Total
