@@ -347,10 +347,6 @@ footer{
 
 /*--TABLET--*/
 @media only screen and (min-width: 640px) and (max-width: 1007px) {
-    body{
-        
-    }
-
     #hero{
         height: 350px;
     }
@@ -367,7 +363,6 @@ footer{
     #heroFrontImage{
         width: 500px;
         height: auto;
-
     }
 
     main{
@@ -458,5 +453,13 @@ footer{
     button:hover {
         background-color:#232222;
         color: #FFFFFF;
+    }
+
+    #hero{
+        height: 605px;
+    }
+
+    .heroContainer{
+        height: 100%;
     }
 }
