@@ -399,17 +399,17 @@ footer{
         align-self: center;
         justify-content: center;
     }
+    .bigItemContainer{
+        width: 45vw;
+        height: 26vh;  
+        margin-right: 2vh;
+    }
 
     .smallFormatImages{
         width: 55%;
         height: auto;
     }
 
-    .bigItemContainer{
-        width: 45vw;
-        height: 26vh;  
-        margin-right: 2vh;
-    }
     
     .largeFormatImages{
         width: 100%;
@@ -456,10 +456,40 @@ footer{
     }
 
     #hero{
-        height: 605px;
+        height: 520px;
     }
 
     .heroContainer{
-        height: 100%;
+        height: 500px;
+    }
+
+    #heroBackgroundImage{
+        height: 500px;
+        width: 100%;
+    }
+
+    .topProductDetails{
+        height: 70px;
+    }
+
+    #heroFrontImage{
+        width: 700px;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .itemContainer{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 350px;
+    }
+
+    .smallFormatImages{
+        width: 250px;
+        height: auto;
     }
 }
