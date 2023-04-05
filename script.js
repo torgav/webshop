@@ -100,29 +100,27 @@ checkoutButton.addEventListener('click', () => {
 });
 
 const removeCartItemButtons = document.getElementsByClassName('productRemoveButton');
-
 for (let i = 0; i < removeCartItemButtons.length; i++) {
   const button = removeCartItemButtons[i];
   button.addEventListener('click', (event) => {
     const cartItem = event.target.parentElement.parentElement;
     const name = cartItem.dataset.name;
     const price = parseInt(cartItem.querySelector('.productPrice').textContent.replace('$', ''));
-    const quantity = parseInt(cartItem.querySelector('.quantityText').textContent);
+    const quantityElement = cartItem.querySelector('.quantityText');
+    let quantity = parseInt(quantityElement.textContent);
     const cartItems = Array.from(cartItemContainer.children);
     const existingCartItem = cartItems.find(item => item.dataset.name === name);
-
-    if (existingCartItem) {
-      if (quantity > 1) {
-        existingCartItem.querySelector('.quantityText').textContent = `${quantity - 1}x`;
-        existingCartItem.querySelector('.productPrice').textContent = `$${(quantity - 1) * price}`;
-      } else {
-        existingCartItem.remove();
-      }
-
-      totalPrice -= price;
-      if (cartAmount) {
-        cartAmount.textContent = `$${totalPrice}`;
-      }
+    if (quantity > 1) {
+      quantity--;
+      quantityElement.textContent = `${quantity}x`;
+      existingCartItem.querySelector('.quantityText').textContent = `${quantity}x`;
+      existingCartItem.querySelector('.productPrice').textContent = `$${quantity * price}`;
+    } else {
+      cartItemContainer.removeChild(cartItem);
+    }
+    totalPrice -= price;
+    if (cartAmount) {
+      cartAmount.textContent = `$${totalPrice}`;
     }
   });
 }
