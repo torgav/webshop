@@ -71,7 +71,7 @@ header{
 #hero{
     display: block;
     width: 100%;
-    height:250px;
+    height:260px;
 }
 
 .heroContainer{
@@ -150,7 +150,7 @@ main{
 }
 
 #topItemContainer{
-    margin-top: 10px;
+   
 }
 
 .smallFormatImages{
@@ -456,7 +456,7 @@ footer{
     }
 
     #hero{
-        height: 620px;
+        height: 650px;
     }
 
     .heroContainer{
@@ -464,7 +464,7 @@ footer{
     }
 
     #heroBackgroundImage{
-        height: 500px;
+        height: 700px;
         width: 100%;
     }
 
@@ -484,23 +484,32 @@ footer{
     .itemContainer{
         display: flex;
         flex-direction: column;
-        width: 400px;
-        height: 350px;
+        width: 580px;
+        height: 500px;
     }
 
     .smallFormatImages{
-        width: 260px;
+        width: 400px;
         height: auto;
     }
 
     .bigItemContainer{
-        width: 400px;
-        height: 350px;
+        margin-top: 15px;
+        width: 580px;
+        height: 500px;
     }
 
     .largeFormatImages{
         width: 100%;
         height: 100%;
+    }
+
+    .left-products{
+        margin-left: 50px;
+    }
+
+    .right-products{
+        margin-right: 5 0px;
     }
 }
 
