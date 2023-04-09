@@ -38,14 +38,14 @@ button:active{
     font-size: calc(0.75rem + 1vw);
 }
 
-.textStyleOdibee{
+.text-style-odibee{
     font-family: 'Odibee Sans', cursive;
     color: #FFFFFF;
     font-weight: 300;
     font-size: calc(0.75vh + 2vw);
 }
 
-.textStyleInter{
+.text-style-inter{
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: calc(0.5vh + 2vw);
@@ -59,7 +59,7 @@ header{
     z-index: 5;
 }
 
-.navContainer{
+.navbar-container{
     width: 100%;
     height: 60px;
     background-color: #000000;
@@ -69,7 +69,7 @@ header{
     justify-content: center;
 }
 
-#headerTitle{
+#title{
     font-size: 30px;
 }
 
@@ -80,7 +80,7 @@ header{
     height:260px;
 }
 
-.heroContainer{
+.hero-container{
     position: absolute;
     display: flex;
     height: 250px;
@@ -89,14 +89,14 @@ header{
     justify-content: center;
 }
 
-#heroBackgroundImage{
+#hero-background-image{
     position: absolute;
     width: 100%;
     height: auto;
     z-index: 0;
 }
 
-#heroFrontImage{
+#hero-front-image{
     position: absolute;
     width: 70%;
     height: auto;
@@ -104,7 +104,7 @@ header{
     transform: rotate(-24deg);
 }
 
-.topProductDetails{
+.top-item-description{
     display: flex;
     position: absolute;
     height: 56px;
@@ -114,17 +114,17 @@ header{
     justify-content: center;
 }
 
-#topButton{
+#hero-buy-button{
     bottom: 0;
     position: absolute;
     z-index: 2;
 }
 
-.itemContainer > .buy-button{
+.item-container > .buy-button{
     position: absolute;
 }
 
-.heroContainer > p{
+.hero-container > p{
     position: absolute;
     z-index: 2;
     margin-top: 150px;
@@ -143,7 +143,7 @@ main{
     z-index: 1;
 }
 
-.itemContainer{
+.item-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: #181818;
@@ -155,33 +155,33 @@ main{
     align-items: center;
 }
 
-.smallFormatImages{
+.small-item-image{
     height: 100px;
     width: 100%;
     margin-left: 10px;
 }
 
-#topBigItemContainer{
+#top-big-item-container{
     margin-top: 10px;
 }
 
-.itemContainer > .itemDescription{
+.item-container > .item-description{
     height: 100px;
 }
 
-.itemDescription{
+.item-description{
     width: auto;
     height: auto;
     text-align: center;
     justify-items: center;
 }
 
-.itemDescription > h2{
+.item-description > h2{
     margin-top: 8px;
     
 }
 
-.bigItemContainer{
+.big-item-container{
     position: relative;
     height: 280px;
     width: 361px;
@@ -189,7 +189,7 @@ main{
     margin-bottom: 2px;
 }
 
-.largeFormatImages{
+.big-item-image{
     position: absolute;
     z-index: 1;
     height: 280px;
@@ -197,7 +197,7 @@ main{
     border-radius: 20px;
 }
 
-.bigItemContainer > .itemDescription{
+.big-item-container > .item-description{
     right: 0;
     bottom: 0;
     position: absolute;
@@ -215,7 +215,7 @@ footer{
     justify-items: center;
 }
 
-.footerMediaContainer{
+.footer-media-container{
     justify-items: center;
     display: flex;
     align-items: center;
@@ -228,11 +228,11 @@ footer{
     margin-left: 17.5px;
 }
 
-#footerTitle{
+#footer-title{
     margin-top: 5%;
 }
     
-#footerTitle > a{
+#footer-title > a{
     color: #FFFFFF;
     text-decoration: none;
     font-family: 'Libre Barcode 39 Text', cursive;
@@ -243,7 +243,7 @@ footer{
 
 /* -----------------------CART-----------------------------*/
 
-#cartIconButton{
+#cart-button{
     height: 28px;
     width: 28px;
     position: absolute;
@@ -269,7 +269,7 @@ footer{
     right: 0;
 }
 
-.cartShadowDrop{
+.cart-background-blur{
     right: -500px;
     bottom: 0;
     margin-top: 61px;
@@ -278,7 +278,7 @@ footer{
     width: 100%;
 }
 
-.cartShadowDrop.is-visible{
+.cart-background-blur.is-visible{
     right: 0;
     z-index: 4;
     backdrop-filter: blur(5px);
@@ -289,11 +289,11 @@ footer{
    padding: 0 14px;
 }
 
-.cartItemContainer{
+.cart-item-container{
     padding: 0;
 }
 
-.cartItems{
+.cart-items{
     display: grid;
     grid-template-columns: 75% 25%;
     position: relative;
@@ -302,16 +302,16 @@ footer{
     border-top:2px solid #FFFFFF;
 }
 
-.quantityText{
+.item-information{
     color: #9a9595;
     margin-right: 2.5px;
 }
 
-.cartItemContainer{
+.cart-item-container{
     list-style: none;
 }
 
-.productRemoveButton{
+.remove-item-button{
     display: flex;
     color: #FFFFFF;
     align-items: center;
@@ -320,11 +320,11 @@ footer{
     top: 50%;
 }
 
-.productDetails > span{
+.item-information > span{
     display: flex;
 }
 
-.productPrice{
+.product-price{
     color: #9a9595;
 }
 
@@ -355,7 +355,7 @@ footer{
         height: 350px;
     }
 
-    .heroContainer{
+    .hero-container{
         position: absolute;
         display: flex;
         height: 349px;
@@ -364,7 +364,7 @@ footer{
         justify-content: center;
     }
 
-    #heroFrontImage{
+    #hero-front-image{
         width: 500px;
         height: auto;
     }
@@ -376,11 +376,11 @@ footer{
        
     }
 
-    #topItemContainer{
+    #top-item-container{
         grid-template-columns: 1/2;
         grid-template-rows: 1/2;
     }
-    .topProductDetails{
+    .top-item-description{
         height: 65px    ;
     }
 
@@ -389,12 +389,12 @@ footer{
         grid-row: 2/3;
     }
 
-    #produkt3{
+    #small-item-image3{
         grid-column: 1/2;
         grid-row: 3/4;
     }
 
-    .itemContainer{
+    .item-container{
         width: 45vw;
         height: 26vh;
         margin-left: 2vh;
@@ -404,23 +404,23 @@ footer{
         justify-content: center;
     }
 
-    .itemDescription{
+    .item-description{
         left: 0;
     }
 
-    .bigItemContainer{
+    .big-item-container{
         width: 45vw;
         height: 26vh;  
         margin-right: 2vh;
     }
 
-    .smallFormatImages{
+    .small-item-image{
         width: 60%;
         height: auto;
     }
 
     
-    .largeFormatImages{
+    .big-item-image{
         width: 100%;
         height: 100%;  
     }
@@ -428,7 +428,7 @@ footer{
     footer{
         margin-top: 8%;
     }
-    .footerMediaContainer{
+    .footer-media-container{
         gap: 30px;
     }
 
@@ -437,7 +437,7 @@ footer{
         height: auto;
     }
 
-    #footerTitle > a{
+    #footer-title > a{
         font-size: 64px;
     }
 
@@ -445,11 +445,11 @@ footer{
         width: 350px;
     }
 
-    .cartItems{
+    .cart-items{
         padding: 24px ;
     }
 
-    .productDetails > span{
+    .item-information > span{
         font-size: 22px;
     }
 }
@@ -465,21 +465,21 @@ footer{
         height: 650px;
     }
 
-    .heroContainer{
+    .hero-container{
         height: 600px;
     }
 
-    #heroBackgroundImage{
+    #hero-background-image{
         height: 700px;
         width: 100%;
     }
 
-    .topProductDetails{
+    .top-item-description{
         height: 100px;
     }
 
-    #heroFrontImage{
-        width: 700px;
+    #hero-front-image{
+        width: 850px;
     }
 
     main{
@@ -487,7 +487,7 @@ footer{
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .itemContainer{
+    .item-container{
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
         width: 580px;
@@ -496,22 +496,26 @@ footer{
         justify-content: center;
     }
 
-    .smallFormatImages{
+    .small-item-image{
         width: 400px;
         height: auto;   
     }
 
-    #produkt2-picture{
+    #small-item-image1{
+        margin-left: 60px;
+    }
+
+    #small-item-image2{
         margin-top: 30px;
     }
 
-    .bigItemContainer{
+    .big-item-container{
         margin-top: 15px;
         width: 580px;
         height: 500px;
     }
 
-    .largeFormatImages{
+    .big-item-image{
         width: 100%;
         height: 100%;
     }
@@ -524,7 +528,7 @@ footer{
         margin-right: 50px;
     }
 
-    .itemDescription{
+    .item-description{
         left: 0;
     }
 
@@ -539,7 +543,7 @@ footer{
         height: 300px;
     }
 
-    .footerMediaContainer{
+    .footer-media-container{
         gap: 100px;
     }
 
@@ -548,7 +552,7 @@ footer{
         height: auto;
     }
 
-    #footerTitle > a{
+    #footer-title > a{
         font-size: 80px;
     }
 
@@ -560,11 +564,11 @@ footer{
         margin: 20px 0;
     }
 
-    .cartItems{
+    .cart-items{
         height: 100px;
     }
 
-    .productRemoveButton{
+    .remove-item-button{
         font-size: 40px;
     }
 

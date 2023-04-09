@@ -1,13 +1,13 @@
-const cartItemContainer = document.querySelector('.cartItemContainer');
-const addToCartButtons = document.querySelectorAll('.addToCartButton');
+const cartItemContainer = document.querySelector('.cart-item-container');
+const addToCartButtons = document.querySelectorAll('.add-cart-button');
 const cartAmount = document.querySelector('.cart-amount');
-const checkoutButton = document.querySelector('.checkoutButton');
+const checkoutButton = document.querySelector('.check-out-button');
 let totalPrice = 0;
 
 function toggleCart() {
   const cartElement = document.getElementById('cart');
   cartElement.classList.toggle('open');
-  const backdrop = document.getElementById('cartBackgroundBlur');
+  const backdrop = document.getElementById('cart-background-blur');
   backdrop.classList.toggle('is-visible');
 }
 
@@ -20,11 +20,11 @@ for (let i = 0; i < addToCartButtons.length; i++) {
     const existingCartItem = cartItems.find(item => item.dataset.name === name);
 
     if (existingCartItem) {
-      const quantityText = existingCartItem.querySelector('.quantityText');
+      const quantityText = existingCartItem.querySelector('.item-information');
       const quantity = parseInt(quantityText.textContent) + 1;
       quantityText.textContent = `${quantity}x`;
 
-      const productPrice = existingCartItem.querySelector('.productPrice');
+      const productPrice = existingCartItem.querySelector('.product-price');
       const existingPrice = parseInt(productPrice.textContent.replace('$', ''));
       const newPrice = existingPrice + parseInt(price);
       productPrice.textContent = `$${newPrice}`;
@@ -35,17 +35,17 @@ for (let i = 0; i < addToCartButtons.length; i++) {
       }
     } else {
       const cartItem = document.createElement('li');
-      cartItem.classList.add('cartItems');
+      cartItem.classList.add('cart-items');
       cartItem.dataset.name = name;
 
       const productDetails = document.createElement('div');
-      productDetails.classList.add('productDetails');
+      productDetails.classList.add('item-information');
 
       const productQuantity = document.createElement('span');
-      productQuantity.classList.add('productQuantity', 'textStyleOdibee');
+      productQuantity.classList.add('productQuantity', 'text-style-odibee');
 
       const quantityText = document.createElement('span');
-      quantityText.classList.add('quantityText', 'textStyleOdibee');
+      quantityText.classList.add('item-information', 'text-style-odibee');
       quantityText.textContent = '1x';
 
       const productName = document.createElement('span');
@@ -55,11 +55,11 @@ for (let i = 0; i < addToCartButtons.length; i++) {
       productQuantity.appendChild(productName);
 
       const productPrice = document.createElement('div');
-      productPrice.classList.add('productPrice', 'textStyleOdibee');
+      productPrice.classList.add('product-price', 'text-style-odibee');
       productPrice.textContent = `$${price}`;
 
       const productRemoveButton = document.createElement('div');
-      productRemoveButton.classList.add('productRemoveButton');
+      productRemoveButton.classList.add('remove-item-button');
 
       const removeButton = document.createElement('span');
       removeButton.innerHTML = '&#10005;';
@@ -82,7 +82,7 @@ for (let i = 0; i < addToCartButtons.length; i++) {
       }
 
       
-      const removeButtonElement = cartItem.querySelector('.productRemoveButton');
+      const removeButtonElement = cartItem.querySelector('.remove-item-button');
       removeButtonElement.addEventListener('click', () => {
         console.log('Product remove button clicked');
         cartItem.remove();
@@ -99,22 +99,22 @@ checkoutButton.addEventListener('click', () => {
   alert('Purchase complete!');
 });
 
-const removeCartItemButtons = document.getElementsByClassName('productRemoveButton');
+const removeCartItemButtons = document.getElementsByClassName('remove-item-button');
 for (let i = 0; i < removeCartItemButtons.length; i++) {
   const button = removeCartItemButtons[i];
   button.addEventListener('click', (event) => {
     const cartItem = event.target.parentElement.parentElement;
     const name = cartItem.dataset.name;
-    const price = parseInt(cartItem.querySelector('.productPrice').textContent.replace('$', ''));
-    const quantityElement = cartItem.querySelector('.quantityText');
+    const price = parseInt(cartItem.querySelector('.product-price').textContent.replace('$', ''));
+    const quantityElement = cartItem.querySelector('.item-information');
     let quantity = parseInt(quantityElement.textContent);
     const cartItems = Array.from(cartItemContainer.children);
     const existingCartItem = cartItems.find(item => item.dataset.name === name);
     if (quantity > 1) {
       quantity--;
       quantityElement.textContent = `${quantity}x`;
-      existingCartItem.querySelector('.quantityText').textContent = `${quantity}x`;
-      existingCartItem.querySelector('.productPrice').textContent = `$${quantity * price}`;
+      existingCartItem.querySelector('.item-information').textContent = `${quantity}x`;
+      existingCartItem.querySelector('.product-price').textContent = `$${quantity * price}`;
     } else {
       cartItemContainer.removeChild(cartItem);
     }
