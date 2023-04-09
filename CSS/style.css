@@ -13,7 +13,7 @@ button {
     border: none;
     outline: none;
     font-family: 'Odibee Sans', cursive;
-    size: 18px;
+  
     transition-duration: 0.4s;
     background-color:#FFFFFF;
     color:#000000;
@@ -22,6 +22,12 @@ button {
     height: 38px;
     cursor: pointer;   
     font-size: calc(0.75rem + 1vw);
+}
+
+button:active{
+    background-color: #000000;
+    color: #FFFFFF;
+    transition-duration: 0.0004s;
 }
 
 #text{
@@ -149,10 +155,6 @@ main{
     align-items: center;
 }
 
-#topItemContainer{
-   
-}
-
 .smallFormatImages{
     height: 100px;
     width: 100%;
@@ -168,6 +170,8 @@ main{
 }
 
 .itemDescription{
+    width: auto;
+    height: auto;
     text-align: center;
     justify-items: center;
 }
@@ -251,7 +255,7 @@ footer{
     position: fixed;
     margin-top: 61px;
     top: 0;
-    right: -500px;
+    right: -1000px;
     width: 260px;
     min-height: 100vh;
     background: #0F0E0E;
@@ -399,6 +403,11 @@ footer{
         align-self: center;
         justify-content: center;
     }
+
+    .itemDescription{
+        left: 0;
+    }
+
     .bigItemContainer{
         width: 45vw;
         height: 26vh;  
@@ -406,7 +415,7 @@ footer{
     }
 
     .smallFormatImages{
-        width: 55%;
+        width: 60%;
         height: auto;
     }
 
@@ -443,13 +452,10 @@ footer{
     .productDetails > span{
         font-size: 22px;
     }
-
-    
-    
 }
 
 @media only screen and (min-width: 1008px){
-    
+
     button:hover {
         background-color:#232222;
         color: #FFFFFF;
@@ -469,7 +475,7 @@ footer{
     }
 
     .topProductDetails{
-        height: 70px;
+        height: 100px;
     }
 
     #heroFrontImage{
@@ -482,15 +488,21 @@ footer{
     }
 
     .itemContainer{
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
         width: 580px;
         height: 500px;
+        align-items: normal;
+        justify-content: center;
     }
 
     .smallFormatImages{
         width: 400px;
-        height: auto;
+        height: auto;   
+    }
+
+    #produkt2-picture{
+        margin-top: 30px;
     }
 
     .bigItemContainer{
@@ -509,7 +521,53 @@ footer{
     }
 
     .right-products{
-        margin-right: 5 0px;
+        margin-right: 50px;
     }
+
+    .itemDescription{
+        left: 0;
+    }
+
+    button{
+        width: 160px;
+        height: 50px;
+    }
+
+    footer{
+        justify-content: center;
+        margin-top: 3%;
+        height: 300px;
+    }
+
+    .footerMediaContainer{
+        gap: 100px;
+    }
+
+    .logos{
+        width: 50px;
+        height: auto;
+    }
+
+    #footerTitle > a{
+        font-size: 80px;
+    }
+
+    .cart{
+        width: 670px;
+    }
+
+    .cart > h2{
+        margin: 20px 0;
+    }
+
+    .cartItems{
+        height: 100px;
+    }
+
+    .productRemoveButton{
+        font-size: 40px;
+    }
+
+
 }
 
