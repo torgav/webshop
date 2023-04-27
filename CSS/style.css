@@ -9,12 +9,11 @@
 
 body{
     background-color: #0F0E0E;
-    font-family: "Times New Roman", Times, serif;
 }
 button {
     border: none;
     outline: none;
-    font-family: 'Odibee Sans', cursive;
+    font-family: 'Odibee Sans', arial;
   
     transition-duration: 0.4s;
     background-color:#FFFFFF;
@@ -33,7 +32,7 @@ button:active{
 }
 
 #text{
-    font-family: 'Odibee Sans', cursive;
+    font-family: 'Odibee Sans', sans-serif;
     color: #FFFFFF;
     margin: 0;
     font-weight: 300;
@@ -41,7 +40,7 @@ button:active{
 }
 
 .text-style-odibee{
-    font-family: 'Odibee Sans', cursive;
+    font-family: 'Odibee Sans', arial;
     color: #FFFFFF;
     font-weight: 300;
     font-size: calc(0.75vh + 2vw);
@@ -265,7 +264,7 @@ footer{
 #footer-title > a{
     color: #FFFFFF;
     text-decoration: none;
-    font-family: 'Libre Barcode 39 Text', cursive;
+    font-family: 'Libre Barcode 39 Text', arial;
     font-style: normal;
     font-weight: 400;   
     font-size: 40px;
